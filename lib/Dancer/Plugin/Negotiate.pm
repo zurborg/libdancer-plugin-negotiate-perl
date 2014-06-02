@@ -178,7 +178,6 @@ sub _langmap {
 
 sub negotiate($) {
 	my $tplname = shift;
-	use Data::Dumper;
 	my $engine = engine('template');
 	my @langmap = _langmap(sub {
 		my $lang = shift->{Language};
