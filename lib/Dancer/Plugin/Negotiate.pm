@@ -171,7 +171,7 @@ sub _langmap {
 			Language => scalar(ref $_ eq 'HASH' ? (keys   %$_)[0] : $_ ),
 			Quality  => scalar(ref $_ eq 'HASH' ? (values %$_)[0] : 1  )
 		};
-		my $id = uc $opt->{Language};
+		my $id = lc $opt->{Language};
 		$grep->($opt) ? ( $id => $opt ) : undef;
 	} @$langs;
 }
