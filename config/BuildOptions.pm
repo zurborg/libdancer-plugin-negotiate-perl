@@ -8,7 +8,7 @@
     PL_FILES            => {},
     PMLIBDIRS           => [qw[ lib ]],
     PREREQ_PM => {
-        'Test::More' => 0,
+        'Test::Most' => 0,
 		'Modern::Perl' => 0,
 		'Dancer' => 1.312,
 		'HTTP::Negotiate' => 6.01,
