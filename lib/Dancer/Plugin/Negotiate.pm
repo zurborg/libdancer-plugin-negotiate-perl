@@ -12,11 +12,11 @@ Dancer::Plugin::Negotiate - Content negotiation plugin for Dancer
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -47,8 +47,6 @@ our $VERSION = '0.01';
 =head1 DESCRIPTION
 
 This module is a wrapper for L<HTTP::Negotiate>.
-
-
 
 =head1 KEYWORDS
 
