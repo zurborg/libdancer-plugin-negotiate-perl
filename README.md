@@ -1,0 +1,49 @@
+# NAME
+
+Dancer::Plugin::Negotiate - Content negotiation plugin for Dancer
+
+# VERSION
+
+Version 0.02
+
+# DESCRIPTION
+
+This module is a wrapper for [HTTP::Negotiate](https://metacpan.org/pod/HTTP::Negotiate).
+
+# AUTHOR
+
+David Zurborg, `<zurborg@cpan.org>`
+
+# SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc Dancer::Plugin::Negotiate
+
+You can also look for information at:
+
+- Redmine: Homepage of this module
+
+    [http://development.david-zurb.org/projects/libdancer-plugin-negotiate-perl](http://development.david-zurb.org/projects/libdancer-plugin-negotiate-perl)
+
+- RT: CPAN's request tracker
+
+    [http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dancer-Plugin-Negotiate](http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dancer-Plugin-Negotiate)
+
+- AnnoCPAN: Annotated CPAN documentation
+
+    [http://annocpan.org/dist/Dancer-Plugin-Negotiate](http://annocpan.org/dist/Dancer-Plugin-Negotiate)
+
+- CPAN Ratings
+
+    [http://cpanratings.perl.org/d/Dancer-Plugin-Negotiate](http://cpanratings.perl.org/d/Dancer-Plugin-Negotiate)
+
+- Search CPAN
+
+    [http://search.cpan.org/dist/Dancer-Plugin-Negotiate/](http://search.cpan.org/dist/Dancer-Plugin-Negotiate/)
+
+# COPYRIGHT & LICENSE
+
+Copyright 2014 David Zurborg, all rights reserved.
+
+This program is released under the following license: open-source
