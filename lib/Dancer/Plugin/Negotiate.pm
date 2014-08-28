@@ -174,8 +174,8 @@ sub _langmap {
 	} @$langs;
 }
 
-sub negotiate($) {
-	my $tplname = shift;
+sub negotiate($;) {
+	my ($tplname, @rest) = @_;
 	my $engine = engine('template');
 	my @langmap = _langmap(sub {
 		my $lang = shift->{Language};
@@ -183,9 +183,9 @@ sub negotiate($) {
 		defined $view and $engine->view_exists($view) ? 1 : 0
 	});
 	my $lang = apply_variant(0, {}, @langmap);
-	return $tplname unless defined $lang;
-	return $tplname unless $lang;
-	return $tplname.'.'.$lang;
+	return ($tplname, @rest) unless defined $lang;
+	return ($tplname, @rest) unless $lang;
+	return ($tplname.'.'.$lang, @rest);
 }
 
 register choose_variant => \&choose_variant;
