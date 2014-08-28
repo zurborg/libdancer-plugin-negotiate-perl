@@ -4,7 +4,7 @@ Dancer::Plugin::Negotiate - Content negotiation plugin for Dancer
 
 # VERSION
 
-Version 0.02
+Version 0.031
 
 # DESCRIPTION
 

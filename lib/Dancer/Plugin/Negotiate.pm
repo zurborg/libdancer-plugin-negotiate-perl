@@ -12,11 +12,11 @@ Dancer::Plugin::Negotiate - Content negotiation plugin for Dancer
 
 =head1 VERSION
 
-Version 0.02
+Version 0.031
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.031';
 
 =head1 SYNOPSIS
 
