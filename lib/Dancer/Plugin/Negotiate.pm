@@ -1,22 +1,14 @@
+use strict;
+use warnings;
 package Dancer::Plugin::Negotiate;
+# ABSTRACT: Content negotiation plugin for Dancer
 
-use Modern::Perl;
 use Carp 'croak';
 use Dancer ':syntax';
 use Dancer::Plugin;
 use HTTP::Negotiate ();
 
-=head1 NAME
-
-Dancer::Plugin::Negotiate - Content negotiation plugin for Dancer
-
-=head1 VERSION
-
-Version 0.031
-
-=cut
-
-our $VERSION = '0.031';
+# VERSION
 
 =head1 SYNOPSIS
 
@@ -48,9 +40,7 @@ our $VERSION = '0.031';
 
 This module is a wrapper for L<HTTP::Negotiate>.
 
-=head1 KEYWORDS
-
-=head2 C<< choose_variant(%variants) >>
+=method C<< choose_variant(%variants) >>
 
 C<%options> is a hash like this:
 
@@ -113,7 +103,7 @@ sub choose_variant {
 	return HTTP::Negotiate::choose($variants, Dancer::SharedData->request->headers);
 }
 
-=head2 C<< apply_variant(%options) >>
+=method C<< apply_variant(%options) >>
 
 This method behaves like C<choose_variant> but sets the according response headers if a variant matched.
 
@@ -132,7 +122,7 @@ sub apply_variant {
 	return $variant;
 }
 
-=head2 C<< negotiate($template_name) >>
+=method C<< negotiate($template_name) >>
 
 This method returns C<$template_name> with a suffixed language tag. The file needs to exist. This method behaves similiary to mod_negotiate of apache httpd's.
 
@@ -195,55 +185,3 @@ register negotiate => \&negotiate;
 register_plugin;
 1;
 
-=head1 AUTHOR
-
-David Zurborg, C<< <zurborg@cpan.org> >>
-
-=head1 BUGS
-
-Please report any bugs or feature requests through my project management tool
-at L<http://development.david-zurb.org/projects/libdancer-plugin-negotiate-perl/issues/new>.  I
-will be notified, and then you'll automatically be notified of progress on
-your bug as I make changes.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc Dancer::Plugin::Negotiate
-
-You can also look for information at:
-
-=over 4
-
-=item * Redmine: Homepage of this module
-
-L<http://development.david-zurb.org/projects/libdancer-plugin-negotiate-perl>
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dancer-Plugin-Negotiate>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Dancer-Plugin-Negotiate>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Dancer-Plugin-Negotiate>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Dancer-Plugin-Negotiate/>
-
-=back
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2014 David Zurborg, all rights reserved.
-
-This program is released under the following license: open-source
-
-=cut
-
-1;
