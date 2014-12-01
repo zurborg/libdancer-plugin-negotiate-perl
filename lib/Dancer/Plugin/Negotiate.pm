@@ -112,7 +112,7 @@ This method behaves like C<choose_variant> but sets the according response heade
 sub apply_variant {
 	local %_ = @_;
 	my $variant = scalar choose_variant(@_);
-	return undef unless defined $variant;
+	return unless defined $variant;
 	my %options = %{$_{$variant}};
 	my $R = Dancer::SharedData->response;
 	$R->header('Content-Type'     => $options{Type}    ) if defined $options{Type};
@@ -164,7 +164,7 @@ sub _langmap {
 	} @$langs;
 }
 
-sub negotiate($;) {
+sub negotiate {
 	my ($tplname, @rest) = @_;
 	my $engine = engine('template');
 	my @langmap = _langmap(sub {
